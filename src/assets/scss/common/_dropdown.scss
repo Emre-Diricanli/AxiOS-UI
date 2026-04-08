@@ -1,9 +1,13 @@
 .dropdown-menu {
     .dropdown-content {
+        background-color: $surface-3;
+        border: $backDropBorder;
         border-radius: 0.5rem;
         overflow-x: hidden !important;
         overflow-y: overlay !important;
         padding: 0 !important;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(16px);
 
         &::-webkit-scrollbar {
             width: 8px;
@@ -14,7 +18,7 @@
         }
 
         &::-webkit-scrollbar-thumb {
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 10px;
             outline: none;
         }

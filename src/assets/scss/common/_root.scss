@@ -1,8 +1,18 @@
-// Root Style
+// Root Style — AxiOS Dark Theme
 
 :root {
     --swiper-navigation-size: 24px !important;
-    --background: $main-background-color;
+    --background: #{$main-background-color};
+    --surface-0: #{$surface-0};
+    --surface-1: #{$surface-1};
+    --surface-2: #{$surface-2};
+    --surface-3: #{$surface-3};
+    --axios-indigo: #{$axios-indigo};
+    --axios-violet: #{$axios-violet};
+    --border-color: #{$border};
+    --text-primary: #{$text-strong};
+    --text-secondary: #{$text};
+    --text-muted: #{$text-light};
 }
 
 * {
@@ -13,8 +23,15 @@ body,
 html {
     overflow: hidden;
     font-family: $family-sans-serif;
+    background-color: $main-background-color;
+    color: $text;
 }
 
+// Ensure all Bulma elements get dark treatment
+.box {
+    background-color: $surface-1;
+    color: $text;
+}
 
 .button,
 .input,
@@ -32,10 +49,37 @@ html {
     }
 }
 
+// Bulma form elements dark overrides
+.input,
+.textarea,
+.select select {
+    background-color: $input-background-color;
+    border-color: $input-border-color;
+    color: $input-color;
+
+    &::placeholder {
+        color: $input-placeholder-color;
+    }
+
+    &:hover {
+        border-color: $input-hover-border-color;
+    }
+
+    &:focus,
+    &:active {
+        border-color: $input-focus-border-color;
+        box-shadow: 0 0 0 2px rgba($axios-indigo, 0.2);
+    }
+}
+
+.label {
+    color: $text-strong;
+}
+
 @font-face {
 	font-family: 'BrittiSans';
 	src: url('../fonts/britti-sans-regular.woff') format('woff');
-  }
+}
 
 @media screen and (max-width: 1024px) {
     .container {

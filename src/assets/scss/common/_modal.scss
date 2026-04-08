@@ -6,7 +6,8 @@
 
 
 .modal-card {
-    background: rgba(255, 255, 255, 1);
+    background: $surface-1;
+    border: $backDropBorder;
     border-radius: $backDropBorderRadius;
 
     .close-container {
@@ -26,7 +27,7 @@
         &:before {
             content: '';
             position: absolute;
-            border-left: #363636 2px solid;
+            border-left: $border 2px solid;
             height: 1rem;
             left: 0;
         }
@@ -42,7 +43,7 @@
 
     .modal-card-head {
         padding: 1.25rem 1.25rem .5rem 1.5rem;
-        border-bottom: 1px solid rgb(228 233 237);
+        border-bottom: 1px solid $border;
     }
 
     .modal-card-body {
@@ -78,7 +79,7 @@
         .pagination-ellipsis {
             font-size: .875rem;
             height: 2.714em;
-            border: 1px solid #CFCFCF !important;
+            border: 1px solid $border !important;
             border-radius: 4px;
 
             &:focus {
@@ -127,7 +128,7 @@
 
     .modal-card-foot {
         padding: .75rem 1.5rem 1.5rem 1.5rem;
-        border-top: 1px solid rgba(133, 149, 163, .1215686275);
+        border-top: 1px solid $border;
 
         .button {
             border-radius: 9999px;
@@ -167,19 +168,21 @@
                         min-width: 7rem;
                         border-radius: 6px;
                         border: none;
+                        color: $text-light;
 
                         &:hover {
                             background-color: transparent;
+                            color: $text-strong;
                         }
                     }
 
                     &.is-active {
                         a {
-                            background: #FFFFFF;
-                            border: .5px solid rgba(0, 0, 0, .2);
-                            color: #000000;
+                            background: $surface-2;
+                            border: .5px solid $border;
+                            color: $text-strong;
                             z-index: 1;
-                            box-shadow: 0px .5px 1px rgba(0, 0, 0, .2);
+                            box-shadow: 0px .5px 1px rgba(0, 0, 0, .3);
                         }
                     }
                 }
@@ -189,7 +192,8 @@
 }
 
 .modal-background {
-    background: rgba(0, 0, 0, .8);
+    background: rgba(0, 0, 0, .75);
+    backdrop-filter: blur(4px);
 }
 
 @media screen and (min-width: 769px) {
@@ -208,12 +212,12 @@
 
 .dialog {
     .modal-card {
-        background-color: #FFFFFF !important;
+        background-color: $surface-1 !important;
 
         .modal-card-head {
             height: 3.5rem;
             padding: 1.25rem 1.25rem .5rem 1.5rem;
-            border-bottom: 1px solid rgba(133, 149, 163, .1215686275);
+            border-bottom: 1px solid $border;
 
             .modal-card-title {
                 font-size: 1rem;
